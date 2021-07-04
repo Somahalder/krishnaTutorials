@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home tutotoring website design</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body >
+    <section class=" sub-header">
+
+        <div class="navbar">
+           <div class="logo">
+              <h2>Krishna's <br><span> Tutorial</span></h2>
+           </div>
+
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+               
+              <ul>
+                 <li><a href="index.html"> HOME</a></li>
+                 <li><a href="Teachers.html"> TEACHERS</a></li>
+                 <li><a href="Price-plan.html"> PRICE-PLAN</a></li>
+                 <li><a href="Theservice.html"> OUR-SERVICES</a></li>
+                 <li><a href="contact.html"> CONTACT-US</a></li>
+              </ul>
+           </div>
+           <i class="fa fa-bars"onclick="showMenu()"></i>
+
+        </div>
+
+              <h1>CONTACT-US</h1>
+   </section>
+
+   <section class="contact-us">
+
+    
+
+     <div class="row">
+      <div class="contact-col">
+          <div class="msg">
+                <i class="fa fa-home"></i>
+                <span>
+                    <h5>XYZ  Road,ABC Building</h5>
+                    <p>kolkata,INDIA</p>
+                </span>
+          </div>
+
+          <div class="msg">
+              <i class="fa fa-phone"></i>
+              <span>
+                  <h5>+91 1234567890</h5>
+                  <p>Monday to Saturday,10AM to 6PM</p>
+              </span>
+            </div>
+
+          <div class="msg">
+              <i class="fa fa-envelope"></i>
+              <span>
+                  <h5>info@krishnatutorials.com</h5>
+                  <p>email your queries</p>
+              </span>
+          </div>
+       </div>
+
+       <div class="contact-col">
+
+
+        <form action="#" method="POST">
+
+          <input type="text" id="name" name="name" placeholder="name">
+              <p id="nameerror"> </p>
+          
+          <input type="email" id="email" name="email" placeholder="email">
+              <p id="emailerror"></p>
+        
+          <input type="text" id="subject" name="subject" placeholder="subject">
+               <p id="subjecterror"></p>
+          
+          <input type="text" id="message" name="message" placeholder="message">
+               <p id="messageerror"></p>
+          
+          <button type="submit" onclick="validate(event);">submit</button>
+          
+         </form>
+         
+
+</section>
+
+
+    <!----------------------javascript for form validation using Reg Ex------>
+   
+
+       <script type="text/javascript">
+
+        function validate(){
+            var name= document.getElementById("name").value;
+            var email= document.getElementById("email").value;
+            var subject= document.getElementById("subject").value;
+            var message= document.getElementById("message").value;
+        
+   
+   
+   
+          var patternname= /^[A-Z]{1}[a-z]{1,}$/;
+          if(name==" " || name==null || patternname.test(name)== false)
+           {
+               document.getElementById("nameerror").innerHTML="Please Enter Name";
+               event.preventDefault();
+           } 
+           
+             else
+             {
+               document.getElementById("nameerror").innerHTML=" ";
+           }
+         
+          var patternemail= /^[a-zA-Z0-9_.]{1,}@[a-z]{3,}[.]{1}[a-z]{2,6}$/;
+          if(email==" " || email==null || patternemail.test(email)== false)
+           {
+               document.getElementById("emailerror").innerHTML="Please Enter valid email";
+               event.preventDefault();
+           } 
+           
+             else
+             {
+               document.getElementById("emailerror").innerHTML=" ";
+           }
+         
+         
+           var patternsubject= /^[A-Za-z0-9.]{5,50}$/;
+           if(subject==" " || subject==null || patternsubject.test(subject)== false)
+           {
+               document.getElementById("subjecterror").innerHTML="Please Enter subject";
+               event.preventDefault();
+           } 
+           
+             else
+             {
+               document.getElementById("subjecterror").innerHTML=" ";
+           }
+         
+         
+           var patternmessage= /^[A-Za-z0-9.]{5,50}$/;
+           if(message==" " || message==null || patternmessage.test(message)== false)
+           {
+               document.getElementById("messageerror").innerHTML="Please Enter valid text";
+               event.preventDefault();
+           } 
+           
+             else
+             {
+               document.getElementById("messageerror").innerHTML=" ";
+           }
+         
+         
+         }
+
+        </script>
+
+        
+       
+       
+  <!--------------------javascript for togge menu -------------->
+
+  <script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right= "0";
+       }
+     function hideMenu(){
+         navLinks.style.right = "-200px";
+     }
+
+</script>
+
+
+</body>
+</html>   

@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <section class=" sub-header">
+
+        <div class="navbar">
+            <div class="logo">
+                <h2>Krishna's <br><span> Tutorial</span></h2>
+             </div>
+           
+
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+               
+              <ul>
+                 <li><a href="index.html"> HOME</a></li>
+                 <li><a href="Teachers.html"> TEACHERS</a></li>
+                 <li><a href="Price-plan.html"> PRICE-PLAN</a></li>
+                 <li><a href="Theservice.html"> OUR-SERVICES</a></li>
+                 <li><a href="contact.html"> CONTACT-US</a></li>
+              </ul>
+           </div>
+           <i class="fa fa-bars"onclick="showMenu()"></i>
+
+        </div>
+
+        <h1> Our Tutoring Services</h1>
+    </section>
+    <br>
+
+    <section class="services">
+        <div class="heroo">
+            
+
+            <div class="container-2">
+                 <div class="indicatorr">
+                     <span class="btnn activee"></span>
+                     <span class="btnn"></span>
+                     <span class="btnn"></span>
+                     <span class="btnn"></span>
+                 </div>
+
+              <div class="tutoring">
+
+              <div class="slidde-row"  id="slidde">
+
+                <div class="slidde-col">
+                    <div class="utext">
+                        <h3>one-on-one doubt clearing session</h3>
+                        <p> Our experienced Teachers sit with students <br>
+                            to clear and clarify students doubts <br>
+                            with much enthusiasm </p>
+                   </div>
+                    <div class="uimg">
+                        <img src="images/slide1.jpeg" width="400px" height="200px">
+                    </div>
+                </div>
+             
+
+             
+              <div class="slidde-col">
+                <div class="utext">
+                    <h3>Practice By Comphrehensive Assignments</h3>
+                    <p> Our Teaching Style Involves Good Amount of<br>
+                         Assignments After each Topic so as to make <br>
+                         our students thorough in the topic and<br>
+                          create a solid base in the subject 
+                        </p>
+               </div>
+                <div class="uimg">
+                    <img src="images/slide2.jpeg" width="500px" height="200px">
+                </div>
+              </div>
+             
+
+             
+              <div class="slidde-col">
+                <div class="utext">
+                <h3>online-coaching and doubt clearing session</h3>
+                <p> We provide on-line coaching <br>
+                    as well as doubt clearing
+                     sessions for our young talents .<br>
+                     We also help them prepare <br>
+                     for the competitive exams<br>
+                    through past year paper solving <br>
+                    and teach them time management .</p>
+              </div>
+               <div class="uimg">
+                <img src="images/slide3.jpeg" width="500px" height="200px">
+               </div>
+             </div>
+             
+
+             
+              <div class="slidde-col">
+               <div class="utext">
+                 <h3>Ample study and practice material </h3>
+                 <p>We have good amount of reference <br>
+                    books and study materials <br>
+                    to satisfy the quest of our young talents</p>
+              </div>
+             <div class="uimg">
+               <img src="images/slide4.jpeg" width="500px" height="200px">
+             </div>
+            
+             </div>
+         </div>
+        </div>
+     </div>
+    </div>
+
+</section>
+
+<br>
+
+    <section class="footer">
+
+        <div class="logo">
+            <h2>Krishna's <br><span> Tutorial</span></h2>
+         </div>
+         
+         <div class="zoom-link">
+             <h2>Our ZOOM-LINK For Online-Tutorial Classes</h2>
+             <p>xyx...12345</p>
+
+         </div>
+
+
+    </section>
+
+
+<!-------------------------javascript for the slider------->
+<script>
+
+    var btnn =document.getElementsByClassName("btnn");
+    var slide = document.getElementById("slidde");
+
+    btnn[0].onclick = function(){
+        slide.style.transform ="translateX(0px)";
+        for(i=0;i<4;i++){
+            btnn[i].classList.remove("activee");
+        }
+         this.classList.add("activee");
+    }
+    btnn[1].onclick = function(){
+        slide.style.transform ="translateX(-800px)";
+        for(i=0;i<4;i++){
+            btnn[i].classList.remove("activee");
+        }
+         this.classList.add("activee");
+    }
+    btnn[2].onclick = function(){
+        slide.style.transform ="translateX(-1600px)";
+        for(i=0;i<4;i++){
+            btnn[i].classList.remove("activee");
+        }
+         this.classList.add("activee");
+    }
+    btnn[3].onclick = function(){
+        slide.style.transform ="translateX(-2400px)";
+        for(i=0;i<4;i++){
+            btnn[i].classList.remove("activee");
+        }
+         this.classList.add("activee");
+    }
+
+</script>
+
+<!--------------------javascript for togge menu     -->
+
+   <script>
+
+       var navLinks = document.getElementById("navLinks");
+
+       function showMenu(){
+           navLinks.style.right= "0";
+          }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+  </script>
+
+
+
+
+    
+</body>
+</html>
